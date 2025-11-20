@@ -10,39 +10,39 @@ license = "MIT OR Apache-2.0"
 authors = ["rust-analyzer team"]
 repository = "https://github.com/rust-lang/rust-analyzer"
 
-[profile.dev]
-debug = 1
+# [profile.dev]
+# debug = 1
 
-[profile.dev.package]
-# These speed up local tests.
-rowan.opt-level = 3
-rustc-hash.opt-level = 3
-smol_str.opt-level = 3
-text-size.opt-level = 3
-serde.opt-level = 3
-salsa.opt-level = 3
-dissimilar.opt-level = 3
+# [profile.dev.package]
+# # These speed up local tests.
+# rowan.opt-level = 3
+# rustc-hash.opt-level = 3
+# smol_str.opt-level = 3
+# text-size.opt-level = 3
+# serde.opt-level = 3
+# salsa.opt-level = 3
+# dissimilar.opt-level = 3
 
-# This speeds up `cargo xtask dist`.
-miniz_oxide.opt-level = 3
+# # This speeds up `cargo xtask dist`.
+# miniz_oxide.opt-level = 3
 
-[profile.release]
-# Set this to 1 or 2 to get more useful backtraces in debugger.
-debug = 0
+# [profile.release]
+# # Set this to 1 or 2 to get more useful backtraces in debugger.
+# debug = 0
 
-[profile.dev-rel]
-inherits = "release"
-debug = 2
+# [profile.dev-rel]
+# inherits = "release"
+# debug = 2
 
-[patch.'crates-io']
-# rowan = { path = "../rowan" }
+# [patch.'crates-io']
+# # rowan = { path = "../rowan" }
 
-# line-index = { path = "lib/line-index" }
-# la-arena = { path = "lib/la-arena" }
-# lsp-server = { path = "lib/lsp-server" }
+# # line-index = { path = "lib/line-index" }
+# # la-arena = { path = "lib/la-arena" }
+# # lsp-server = { path = "lib/lsp-server" }
 
 
-# ungrammar = { path = "lin/ungrammar" }
+# # ungrammar = { path = "lin/ungrammar" }
 
 # salsa = { path = "../salsa" }
 # salsa-macros = { path = "../salsa/components/salsa-macros" }
